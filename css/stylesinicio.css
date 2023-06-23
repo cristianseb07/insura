@@ -30,6 +30,7 @@ header {
 	overflow:hidden; /* Eliminamos errores de float */
 	background:#252932;
 	margin-bottom:20px;
+
 }
 
 .wrapper {
@@ -97,12 +98,32 @@ padding:5px 10px;
 
 
 
-@media screen and (max-width: 950px) {
-	header .logo,
+@media screen and (max-width: 700px) {
+header {
+	position:top;
+
+
+
+}
+
+	
+        header .logo {
+		width:100%;
+		text-align:center; /*Centramos el menu y el logotipo*/
+		line-height:50px;
+                padding:calc(0.4rem + 0.2vw);
+                font-size:calc(0.1rem + 8vw);
+	}
 	header nav {
 		width:100%;
 		text-align:center; /*Centramos el menu y el logotipo*/
-		line-height:25px;
+		line-height:30px;
+
+	}
+
+        header nav a {
+	        padding:calc(0.1rem + 1.3vw);
+	        font-size:calc(0.1rem + 2.4vw);
 	}
 
 	.header2 {
@@ -300,12 +321,13 @@ margin-right: 0%;
 }
 
 footer {
-  background: rgba(255,0,0,0.7);
+  text-align: center;
+background: rgba(255,0,0,0.7);
 background-size:5%
   font-family: 'beautyinthestardust'; src: url('../fonts/beautyinthestardust.ttf') format("truetype");
    font-weight: normal;
    font-style: normal;
-  position: absolute;
+  position: fixed;
 bottom: 0;
 width:100%;
 
