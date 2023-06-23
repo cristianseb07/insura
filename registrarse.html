@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title> Registrarse - INSURA</title>
+    <link rel="stylesheet" href="css/stylesregistrarse.css">
+    
+    <link rel="icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+   
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/header.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  
+
+</head>
+  
+
+<body>
+
+      <header class="">
+		<div class="wrapper">
+			<div class="logo">INSURA</div>
+		<nav>
+			
+			<a href="index.html" style="text-decoration: None">Inicio</a>
+			<a href="nosotros.html" style="text-decoration: None">Nosotros</a>
+			<a href="productos.html" style="text-decoration: None">Productos</a>
+	                <a href="servicios.html" style="text-decoration: None">Servicios</a>
+			<a href="contacto.html" style="text-decoration: None">Contacto</a>	
+                        <a href="login.html" style="text-decoration: None">Login</a>
+		  
+		</nav>
+
+		</div>
+
+      </header>
+
+
+    <div class="login-box" id="formulario">
+      <h1>Registrarse</h1>
+      
+          <!-- Formulario Bootstrap con validacion JS-->
+
+    
+        <form id="form1" action="procesar.php" method="post" class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="Nombre de usuario">Nombre de usuario</label>
+                  <input type="text" class="formulario__input" name="usuario" id="Nombre de usuario" placeholder="Usuario (2-16 caracteres)" value="" required minlength="2" maxlength="16">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (2-16 caracteres)</div> 
+                </div>   
+                <div class="col-md-4 mb-3">
+                  <label for="Ingrese su fecha de nacimiento">Ingrese su fecha de nacimiento</label>
+                  <input type="date" onchange="edad(event);" class="formulario__input" name="fechanac" id="fechaNacimiento" placeholder="" min="1925-01-01" max=2021-12-10" value="" required>
+                  <div class="valid-feedback">Ok! <a id="edad"></a></div>
+                  <div class="invalid-feedback">Complete el campo</div>   
+                </div>
+
+<div class="col-md-4 mb-3">
+                  <label for="Ingrese su pais">Ingrese su pais</label>
+                  <input type="text" class="formulario__input" name="pais" id="Ingrese su pais" placeholder="Ingresar pais" value="" required>
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo</div>   
+                </div>
+
+
+<div class="col-md-4 mb-3">
+                  <label for="Ingrese su provincia">Ingrese su provincia</label>
+                  <input type="text" class="formulario__input" name="provincia" id="Ingrese su provincia" placeholder="Ingresar provincia" value="" required>
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo</div>   
+                </div>
+
+
+
+<div class="col-md-4 mb-3">
+                  <label for="Contraseña">Contrase&ntildea</label>
+                  <input type="password" class="formulario__input" name="contraseña" id="Contraseña" placeholder="4-16 caracteres" value="" required minlength="4" maxlength="16">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (4-16 caracteres)</div>   
+                </div>
+
+
+<div class="col-md-4 mb-3">
+                  <label for="Mail">Mail</label>
+                  <input type="email" class="formulario__input" name="mail" id="Mail" placeholder="xxxxx@xxxx.xxx" value="" required>
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo. (Formato de email)</div>   
+                </div>
+
+
+
+              
+              
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+
+
+    </div>   
+</div>
+
+
+
+
+
+
+  
+  <!-- Uso de script -->
+
+<script src="js/funcionesgrupo99.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+
+
+<script> 
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+
+
+  </body>
+
+<footer> &copy; Copyright 2023 &copy; <a href="index.html">INSURA</a>
+</footer>
+
+</html>

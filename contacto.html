@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+    <meta charset="utf-8">
+    <title>Contacto - INSURA</title>
+    <link rel="stylesheet" href="css/stylesinicio.css">
+    <link rel="icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/header.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  
+</head>
+  
+
+<body>
+
+      <header class="">
+		<div class="wrapper">
+			<div class="logo">INSURA</div>
+		<nav>
+			
+			<a href="index.html" style="text-decoration: None">Inicio</a>
+			<a href="nosotros.html" style="text-decoration: None">Nosotros</a>
+			<a href="productos.html" style="text-decoration: None">Productos</a>
+	                <a href="servicios.html" style="text-decoration: None">Servicios</a>
+			<a href="contacto.html" style="text-decoration: None">Contacto</a>	
+                        <a href="login.html" style="text-decoration: None">Login</a>
+		  
+		</nav>
+
+		</div>
+
+      </header>
+
+<section>
+    
+<div class="login-box" id="formulario">
+      <h1>Contacto</h1><br>
+      <!-- Formulario Bootstrap con validacion JS-->
+
+    
+        <form onsubmit="return validar(event)"> 
+              <div class="form-row">
+
+
+                <div class="col-lg-6 col-xs-12">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="formulario__input" name="Nombre" id="Nombre" placeholder="Coloque su nombre" value="" required minlength="2" maxlength="16">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (2-16 caracteres)</div> 
+                </div>   
+
+
+
+<div class="col-lg-6 col-xs-12">
+                  <label for="Apellido">Apellido</label>
+                  <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Coloque su apellido" value="" required minlength="2" maxlength="16">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (2-16 caracteres)</div> 
+                </div>   
+
+
+
+<div class="col-lg-12 col-xs-12">
+                  <label for="Mail">Email</label>
+                  <input type="email" class="formulario__input" name="mail" id="mail" placeholder="Coloque su Email" value="" required minlength="2" maxlength="16">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (xxxx@xxxx.xx)</div> 
+                </div>   
+
+<div class="col-lg-12 col-xs-12">
+                  <label for="Telefono">Teléfono</label>
+                  <input type="tel" class="formulario__input" pattern="[0-9]{10}" name="telefono" id="telefono" placeholder="Complete el campo sin 0 y sin 15 en caso de celular (Ejm 1112345678)" value="" required>
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo sin "0" y sin"15" en caso de celular (Ejm 1112345678)</div> 
+                </div>   
+
+
+<div class="col-lg-12 col-xs-12">
+                  <label for="Consulta">Consulta</label>
+                  <input type="text" class="formulario__input" name="consulta" rows="3" id="consulta" placeholder="Escriba su consulta" value="" required minlength="2" maxlength="500">
+                  <div class="valid-feedback">Ok!</div>
+                  <div class="invalid-feedback">Complete el campo (max 250 caracteres)</div> 
+                </div>   
+
+                
+
+
+
+             <div class="col-lg-12 col-xs-12">
+ 
+              <button id="btn8" class="btn btn-primary" type="submit" >Enviar</button>
+
+</div>
+       
+
+
+      <a class="redes" href="https://www.facebook.com/"> <img src="img/facebook.png" class="redes"  alt=""></a>
+      <a class="redes" href="https://www.twitter.com/"> <img src="img/twitter.png" class="redes"   alt=""></a>
+      <a class="redes" href="https://www.instagram.com/"> <img src="img/instagram.png" class="redes"   alt=""></a>
+
+
+
+
+
+     
+</form>
+
+
+    </div>
+     
+	
+
+
+
+</section>
+
+
+
+
+<footer> &copy; Copyright 2023 &copy; <a href="index.html">INSURA</a>
+</footer>
+
+
+<script src="jquery/jquery-3.3.1.min.js"></script>	 	
+    <script src="popper/popper.min.js"></script>	 	 	
+    <script src="bootstrap4/js/bootstrap.min.js"></script>
+	  
+    <!--    Plugin sweet Alert 2  -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+ <script src="js/funcionesgrupo99.js"></script>
+
+<script> 
+
+
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+
+
+    
+
+
+  </body>
+
+
+
+
+</html>
