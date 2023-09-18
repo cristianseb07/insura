@@ -16,7 +16,7 @@ function cargar(item){
 
     modeloSeleccionado.innerHTML =  item.getElementsByTagName("p")[0].innerHTML;
 
-    descripSeleccionada.innerHTML = "Descripción del modelo ";
+    descripSeleccionada.innerHTML = "Descripción del modelo";
 
     precioSeleccionado.innerHTML =  item.getElementsByTagName("span")[0].innerHTML;
 

@@ -34,22 +34,25 @@ header {
 }
 
 .wrapper {
-	width:90%; /* Establecemos que el ancho sera del 90% */
+	width:95%; /* Establecemos que el ancho sera del 90% */
 	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
 	margin:auto; /* Centramos los elementos */
 	overflow:hidden; /* Eliminamos errores de float */
 }
 
 header .logo {
-	color:#f2f2f2;
-	font-size:calc(0.1rem + 4vw);
-	line-height:90px;
-	float:left; 
+    margin: all;
+    width:25%;
+    height:70px;
+    background: url("../img/nombre.jpeg")no-repeat center/100%;
+    float: left;
+    margin-right: 0px;
+  	
 }
 
 header nav {
 	float:right;
-	line-height:90px;
+	line-height:5%;
 }
 
 header nav a {
@@ -80,27 +83,28 @@ header nav a:hover {
 }
 
 .header2 .logo {
-	line-height:50px;
-	font-size: calc(0.1rem + 3vw);
+	height:1px;
+        width:80%;
+        padding:5px 5px;
 }
 
 .header2 nav {
-	line-height:10px;
+	line-height:50px;
 
-font-size: calc(0.5rem + 0.5vw);
+        font-size: calc(0.5rem + 0.5vw);
 }
 
 .header2 nav a {
-	font-size: calc(0.05rem + 1.25vw);
-padding:5px 10px;
+	font-size: calc(0.08rem + 1.25vw);
+        padding:5px 10px;
 }
 
 
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px; min-width: 260px) {
 header {
-	position:top;
+	position:top-fixed;
 
 
 
@@ -108,29 +112,33 @@ header {
 
 	
         header .logo {
-		width:100%;
+		width:70%;
 		text-align:center; /*Centramos el menu y el logotipo*/
-		line-height:50px;
+		line-height:5px;
                 padding:calc(0.4rem + 0.2vw);
-                font-size:calc(0.1rem + 8vw);
+                font-size:calc(0.1rem + 1vw);
+float: none;
+margin-right: 1%;
+height: 25px;
 	}
 	header nav {
 		width:100%;
 		text-align:center; /*Centramos el menu y el logotipo*/
-		line-height:30px;
+		line-height:2%;
+float: none;
 
 	}
 
         header nav a {
 	        padding:calc(0.1rem + 1.3vw);
-	        font-size:calc(0.1rem + 2.4vw);
+	        font-size:calc(0.01rem + 2.4vw);
 	}
 
 	.header2 {
 		height:auto;
 	}
 
-	.header2 .logo,
+	.header2 .logo
 	.header2 nav {
 		line-height:10px;
 	}
